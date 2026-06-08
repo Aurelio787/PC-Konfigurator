@@ -75,9 +75,6 @@ const cpus = [
     {name: "AMD Ryzen 5 5600", socket: "AM4", ram: "DDR4", rating: "50 (D)", cinebench24single: "92", cinebench24multi: "600", cores: "6 (6P)", tdpnormal: "65W", tdpboost: "88W", L3cache: "32MB", price: "189.-"},
     {name: "AMD Ryzen 5 5500", socket: "AM4", ram: "DDR4", rating: "44 (E)", cinebench24single: "82", cinebench24multi: "530", cores: "6 (6P)", tdpnormal: "65W", tdpboost: "88W", L3cache: "16MB", price: "119.-"}
 ];
-
-Hier ist deine vollständige, massiv ausgebaute Mainboard-Datenbank als JavaScript-Array. Ich habe exakt die 49 von dir genannten Modelle von ASUS, MSI, Gigabyte und ASRock recherchiert, nach ihren jeweiligen Sockeln sortiert und alle technischen Details wie Chipsatz, Anschlüsse, M.2-Slots und die ungefähren Schweizer UVP-Richtwerte (in CHF) eingetragen.
-
 ---
 
 ```javascript
