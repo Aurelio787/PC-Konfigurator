@@ -687,7 +687,7 @@
       "price": ""
     }
   ],
-  "motherboards": [
+   "motherboards": [
     {
       "id": "mb-asus-proart-x870e",
       "name": "ProArt X870E-Creator WiFi",
@@ -1374,9 +1374,9 @@
       "specialFeatures": "Brillante On-Board RGB-Zonen, extrem dicke Dr.MOS MOSFET-Kühlung",
       "price": 159
     }
-  ]
-}
-{
+  ],
+
+
   "gpus": [
     {
       "id": "gpu-nvidia-asus-3090ti-strix",
@@ -2026,5 +2026,73 @@
       "price": "ca. 1'089 CHF",
       "recommended_psu": "750W"
     }
-  ]
+  ],
+  "cases": [
+  {
+    "id": "case-fractal-north-charcoal-tg",
+    "name": "Fractal Design North Charcoal Black TG",
+    "brand": "Fractal Design",
+    "form_factor": "ATX, Micro-ATX, Mini-ITX",
+    "color": "Charcoal Black (Echtholz Walnuss)",
+    "side_panel": "Tempered Glass",
+    "chambers": "1 Kammer",
+    "preinstalled_fans": "2x 140mm",
+    "rgb": "Nein",
+    "backconnect": "Nein",
+    "max_cpu_cooler_height": "170 mm",
+    "max_gpu_length": "355 mm",
+    "max_psu_length": "255 mm",
+    "psu_form_factor": "ATX",
+    "radiator_top": "Bis zu 240 mm",
+    "radiator_front": "Bis zu 360 mm",
+    "radiator_side": "Nicht unterstützt",
+    "front_io": "1x USB 3.1 Gen 2 Typ-C, 2x USB 3.0, 1x Audio-Kombi",
+    "drive_bays": "2x 3.5\" / 2x 2.5\"",
+    "price": "145.-"
+  },
+  {
+    "id": "case-lianli-o11-vision-compact-black",
+    "name": "Lian Li O11 Vision Compact Black",
+    "brand": "Lian Li",
+    "form_factor": "ATX, Micro-ATX, Mini-ITX",
+    "color": "Schwarz",
+    "side_panel": "Tempered Glass (3-seitig nahtlos)",
+    "chambers": "2 Kammern (Dual-Chamber)",
+    "preinstalled_fans": "0 (Keine)",
+    "rgb": "Nein",
+    "backconnect": "Ja",
+    "max_cpu_cooler_height": "167 mm",
+    "max_gpu_length": "408 mm",
+    "max_psu_length": "220 mm",
+    "psu_form_factor": "ATX",
+    "radiator_top": "Bis zu 360 mm (nur im Mesh-Modus)",
+    "radiator_front": "Nicht unterstützt",
+    "radiator_side": "Bis zu 360 mm",
+    "front_io": "1x USB 3.1 Typ-C, 2x USB 3.0, 1x Audio-Kombi",
+    "drive_bays": "2x 3.5\" / 2x 2.5\"",
+    "price": "129.-"
+  },
+  {
+    "id": "case-asus-tuf-gt302-argb-white",
+    "name": "ASUS TUF Gaming GT302 ARGB White",
+    "brand": "ASUS",
+    "form_factor": "ATX, Micro-ATX, Mini-ITX",
+    "color": "Weiss",
+    "side_panel": "Tempered Glass / Mesh austauschbar",
+    "chambers": "1 Kammer",
+    "preinstalled_fans": "4x 140mm ARGB",
+    "rgb": "Ja",
+    "backconnect": "Ja (Unterstützt ASUS BTF & MSI Project Zero)",
+    "max_cpu_cooler_height": "165 mm",
+    "max_gpu_length": "407 mm",
+    "max_psu_length": "220 mm",
+    "psu_form_factor": "ATX",
+    "radiator_top": "Bis zu 360 mm",
+    "radiator_front": "Bis zu 280 mm",
+    "radiator_side": "Nicht unterstützt",
+    "front_io": "1x USB 3.2 Gen 2x2 Typ-C, 2x USB 3.2 Gen 1, 1x Audio-Kombi",
+    "drive_bays": "2x 3.5\" / 2x 2.5\"",
+    "price": "135.-"
+  }
+]
 }
