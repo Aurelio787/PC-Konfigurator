@@ -1,21 +1,46 @@
 "use strict";
-
 const BauteilAuswahl = document.getElementById("Bauteil");
-let objectCount;
+
+let objectCountcpu;
+let objectCountmotherboard;
+let objectCountgpu;
+let objectCountPowersuply;
+let objectCountcases;
 let DB; 
+
+console.log(BauteilAuswahl);
+
 
 fetch('./jsonData.json')
   .then((response) => response.json())
-    .then((json) => {
-        //Daten zuweisen
-            DB = json;
-                objectCount = json.cases.length;
-                    
-                        //KonfiguratorEngine
-                            startKonfigurator();
-                              });
-                                console.log("Bitte Bauteil auswählen.");
-                                alert("Bitte Bauteil auswählen.");
-                              
+  .then((json) => {
+    DB = json;
+    objectCountcpu = json.cpus;
+    objectCountmotherboard = json.motherboards;
+    objectCountgpu = json.gpus;
+    objectCountPowersuply = 
+    
+    startKonfigurator();
+  });
 
+function startKonfigurator() {
+  // 1. Dropdown leeren, falls nötig
+  BauteilAuswahl.innerHTML = '<option value="">-- Bitte wählen --</option>';
+
+  // 2. Über die "cases" iterieren und Optionen erstellen
+  DB.cases.forEach((item) => {
+    const option = document.createElement("option");
+    
+    // Hier musst du die Keys eventuell an dein JSON anpassen (z.B. item.id oder item.name)
+    option.value = item.id || item.name; 
+    option.textContent = item.name || item.id;
+    
+    BauteilAuswahl.appendChild(option);
+  });
+
+  console.log("Daten erfolgreich geladen. Anzahl Bauteile:", objectCount);
+}
+
+// Diese Meldungen kommen aktuell sofort, da fetch asynchron arbeitet
+console.log("Warten auf Daten..."); 
 
