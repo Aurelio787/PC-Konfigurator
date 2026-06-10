@@ -1,20 +1,20 @@
 let objectCount;
-let DB; // Hier speichern wir die ganze Datenbank ab
+let DB; 
 
 fetch('./jsonData.json')
   .then((response) => response.json())
     .then((json) => {
-        // 1. Daten zuweisen
+        //Daten zuweisen
             DB = json;
                 objectCount = json.cases.length;
                     
-                        // 2. Erst JETZT, wo alles da ist, starten wir den Konfigurator!
+                        //KonfiguratorEngine
                             startKonfigurator();
                               });
 
                               function startKonfigurator() {
                                 console.log("Konfigurator startet mit " + objectCount + " Gehäusen.");
-                                  // Hier kommt dein Code rein, der die Gehäuse auf der Webseite anzeigt
+                                  //Code um Gehäusen an zu zeigen
                                     console.log(DB.cases); 
                                     }
 
