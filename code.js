@@ -1,6 +1,6 @@
 "use strict";
 
-const BauteilAuswahl = document.getElementbyid(Bauteil);
+const BauteilAuswahl = document.getElementbyid("Bauteil");
 let objectCount;
 let DB; 
 
