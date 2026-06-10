@@ -1,3 +1,6 @@
+"use strict";
+
+const BauteilAuswahl = document.getElementbyid("Bauteil");
 let objectCount;
 let DB; 
 
@@ -11,11 +14,8 @@ fetch('./jsonData.json')
                         //KonfiguratorEngine
                             startKonfigurator();
                               });
-
-                              function startKonfigurator() {
-                                console.log("Konfigurator startet mit " + objectCount + " Gehäusen.");
-                                  //Code um Gehäusen an zu zeigen
-                                    console.log(DB.cases); 
-                                    }
+                                console.log("Bitte Bauteil auswählen.");
+                                alert("Bitte Bauteil auswählen.");
+                              
 
                                     
