@@ -18,4 +18,4 @@ fetch('./jsonData.json')
                                 alert("Bitte Bauteil auswählen.");
                               
 
-                                    
+
