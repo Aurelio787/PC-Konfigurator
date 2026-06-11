@@ -77,4 +77,8 @@ startButton.addEventListener("click", function() {
       BauteilBild.style.display = "block";
     }
   }
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 87bcf8784130f7dcec65fa865226db6535b99a29
