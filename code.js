@@ -18,8 +18,9 @@ fetch('./Datenbank.json')
     objectCountcpu = json.cpus;
     objectCountmotherboard = json.motherboards;
     objectCountgpu = json.gpus;
-    objectCountPowersuply = 
-    
+    objectCountPowersuply = json.powersupplies;
+    objectCountcases = json.cases;
+
     startKonfigurator();
   });
 
@@ -32,8 +33,8 @@ function startKonfigurator() {
     const option = document.createElement("option");
     
     // Hier musst du die Keys eventuell an dein JSON anpassen (z.B. item.id oder item.name)
-    option.value = item.id || item.name; 
-    option.textContent = item.name || item.id;
+    option.value = item.Type || item.Type;
+    option.textContent = item.Type || item.Type;
     
     BauteilAuswahl.appendChild(option);
   });
