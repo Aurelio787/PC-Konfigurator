@@ -11,7 +11,7 @@ let DB;
 console.log(BauteilAuswahl);
 
 
-fetch('./jsonData.json')
+fetch('./Datenbank.json')
   .then((response) => response.json())
   .then((json) => {
     DB = json;
