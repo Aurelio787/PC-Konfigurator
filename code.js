@@ -2,7 +2,7 @@
 
 const BauteilAuswahl = document.getElementById("Bauteil");
 const ModellAuswahl = document.getElementById("ModellAuswahl");
-const startButton = document.getElementById("Start"); 
+const startButton = document.getElementById("StartButton"); 
 const anzeigeDiv = document.getElementById("AusgewaehlterInhalt");
 const BauteilBild = document.getElementById("BauteilBild");
 
