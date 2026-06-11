@@ -29,17 +29,17 @@ function startKonfigurator() {
   BauteilAuswahl.innerHTML = '<option value="">-- Bitte wählen --</option>';
 
   // 2. Über die "cases" iterieren und Optionen erstellen
-  DB.cases.forEach((item) => {
+  DB.type.forEach((item) => {
     const option = document.createElement("option");
     
     // Hier musst du die Keys eventuell an dein JSON anpassen (z.B. item.id oder item.name)
-    option.value = item.type || item.type;
-    option.textContent = item.type || item.type;
+    option.value = item.type;
+    option.textContent = item.type;
     
     BauteilAuswahl.appendChild(option);
   });
 
-  console.log("Daten erfolgreich geladen. Anzahl Bauteile:" + DB.cpus.length + " CPUs, " + DB.motherboards.length + " Motherboards, " + DB.gpus.length + " GPUs, " + DB.powersupplies.length + " Powersupplies, " + DB.cases.length + " Cases.");
+  console.log("Daten erfolgreich geladen. Anzahl Bauteile:" + objectCountcpu + " CPUs, " + objectCountmotherboard + " Motherboards, " + objectCountgpu + " GPUs, " + objectCountPowersuply + " Powersupplies, " + objectCountcases + " Cases.");
 }
 
 // Diese Meldungen kommen aktuell sofort, da fetch asynchron arbeitet
