@@ -33,13 +33,13 @@ function startKonfigurator() {
     const option = document.createElement("option");
     
     // Hier musst du die Keys eventuell an dein JSON anpassen (z.B. item.id oder item.name)
-    option.value = item.Type || item.Type;
-    option.textContent = item.Type || item.Type;
+    option.value = item.type || item.type;
+    option.textContent = item.type || item.type;
     
     BauteilAuswahl.appendChild(option);
   });
 
-  console.log("Daten erfolgreich geladen. Anzahl Bauteile:", objectCount);
+  console.log("Daten erfolgreich geladen. Anzahl Bauteile:" + DB.cpus.length + " CPUs, " + DB.motherboards.length + " Motherboards, " + DB.gpus.length + " GPUs, " + DB.powersupplies.length + " Powersupplies, " + DB.cases.length + " Cases.");
 }
 
 // Diese Meldungen kommen aktuell sofort, da fetch asynchron arbeitet
