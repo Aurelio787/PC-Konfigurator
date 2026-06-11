@@ -2,6 +2,9 @@
 
 const BauteilAuswahl = document.getElementById("Bauteil");
 const ModellAuswahl = document.getElementById("ModellAuswahl");
+const startButton = document.getElementById("Start"); 
+const anzeigeDiv = document.getElementById("AusgewaehlterInhalt");
+const BauteilBild = document.getElementById("BauteilBild");
 
 let DB; 
 
@@ -22,16 +25,13 @@ function startKonfigurator() {
   Object.keys(DB).forEach((kategorie) => {
     const option = document.createElement("option");
     option.value = kategorie; 
-    
     option.textContent = kategorie.charAt(0).toUpperCase() + kategorie.slice(1);
-    
     BauteilAuswahl.appendChild(option);
   });
 }
 
 BauteilAuswahl.addEventListener("change", function() {
   const gewaehlteKategorie = BauteilAuswahl.value;
-
   ModellAuswahl.innerHTML = '<option value="">-- Modell wählen --</option>';
 
   if (!gewaehlteKategorie) return;
@@ -41,11 +41,8 @@ BauteilAuswahl.addEventListener("change", function() {
   if (produkte && produkte.length > 0) {
     produkte.forEach((item) => {
       const option = document.createElement("option");
-      
       option.value = item.id; 
-      
       option.textContent = `${item.name} (${item.price})`;
-      
       ModellAuswahl.appendChild(option);
     });
   } else {
@@ -53,17 +50,31 @@ BauteilAuswahl.addEventListener("change", function() {
   }
 });
 
-const startButton = document.getElementById("StartButton");
-const anzeigeDiv = document.getElementById("AusgewaehlterInhalt");
-
 startButton.addEventListener("click", function() {
+  const gewaehlteKategorie = BauteilAuswahl.value;
   const gewaehltesModellId = ModellAuswahl.value;
-  const gewaehlterText = ModellAuswahl.options[ModellAuswahl.selectedIndex]?.text;
 
   if (!gewaehltesModellId) {
     anzeigeDiv.textContent = "Bitte wähle zuerst ein konkretes Modell aus!";
+    if (BauteilBild) BauteilBild.style.display = "none";
     return;
   }
 
-  anzeigeDiv.textContent = "Du hast ausgewählt: " + gewaehlterText + " (ID: " + gewaehltesModellId + ")";
+  // Das ausgewählte Produkt aus der Datenbank suchen, um an den Sockel zu kommen
+  const kategorieProdukte = DB[gewaehlteKategorie];
+  const gefundenesProdukt = kategorieProdukte.find(item => item.id === gewaehltesModellId);
+
+  if (gefundenesProdukt) {
+    anzeigeDiv.textContent = "Du hast ausgewählt: " + gefundenesProdukt.name + " für " + gefundenesProdukt.price;
+
+    if (BauteilBild) {
+      if (gewaehlteKategorie === "cpus") {
+        const sockelName = gefundenesProdukt.socket.toLowerCase();
+        BauteilBild.src = `bilder/sockel-${sockelName}.jpg`;
+      } else {
+        BauteilBild.src = `bilder/${gefundenesProdukt.id}.jpg`;
+      }
+      BauteilBild.style.display = "block";
+    }
+  }
 });
