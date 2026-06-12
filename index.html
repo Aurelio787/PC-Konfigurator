@@ -4,34 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PC-Konfigurator</title>
-<style>
+    <style>
 /* Verhindert, dass die Hardware-Bilder riesig angezeigt werden */
-#BauteilBild {
-max-width: 300px;
-max-height: 300px;
-margin-top: 15px;
-display: none; /* Am Anfang unsichtbar */
-border-radius: 8px;
-}
-</style>
-</head>
-<body>
-<label for="Bauteil">Wähle ein Bauteil:</label>
+    #BauteilBild {
+    max-width: 300px;
+    max-height: 300px;
+    margin-top: 15px;
+    display: none; /* Am Anfang unsichtbar */
+    border-radius: 8px;
+    }
+    </style>
+</html>
+    <body>
+        <label for="Bauteil">Wähle ein Bauteil:</label>
 
-<select id="Bauteil">
-<option value="">Lade Daten...</option>
-</select> 
+        <select id="Bauteil">
+        <option value="">Lade Daten...</option>
+        </select> 
 
-<select id="ModellAuswahl">
-<option value="">-- Bitte Kategorie wählen --</option>
-</select>
+        <select id="ModellAuswahl">.</select>
+        
+        <button id="StartButton">Start</button>
 
-<button id="StartButton">Start</button>
+        <div id="AusgewaehlterInhalt" style="margin-top: 15px;"></div>
 
-<div id="AusgewaehlterInhalt" style="margin-top: 15px;"></div>
+        <img id="BauteilBild" src="" alt="Vorschau des Bauteils">
 
-<img id="BauteilBild" src="" alt="Vorschau des Bauteils">
-
-<script src="code.js"></script>
-</body>
+            <script src="code.js"></script>
+    </body>
 </html>
