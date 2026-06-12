@@ -70,9 +70,9 @@ startButton.addEventListener("click", function() {
     if (BauteilBild) {
       if (gewaehlteKategorie === "cpus") {
         const sockelName = gefundenesProdukt.socket.toLowerCase();
-        BauteilBild.src = `bilder/sockel-${sockelName}.jpg`;
+        BauteilBild.src = `Images/sockel-${sockelName}.jpg`;
       } else {
-        BauteilBild.src = `bilder/${gefundenesProdukt.id}.jpg`;
+        BauteilBild.src = `Images/${gefundenesProdukt.id}.jpg`;
       }
       BauteilBild.style.display = "block";
     }
